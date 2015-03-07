@@ -6,7 +6,7 @@ class Request < ActiveRecord::Base
   	batch, batch_size = [], 1_000 
   	base_url = 'http://www.cbr.ru/credit/102.asp?when=0&dt=20150101&regnum='
 
-	(1..10).each do |ii| 	
+	(1..3524).each do |ii| 	
 		# url = 'http://www.cbr.ru/credit/102.asp?regnum=2209&when=0&dt=20150101'
 		url = base_url + ii.to_s
 		doc = Nokogiri::HTML(open(url)) rescue nil

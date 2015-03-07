@@ -1,6 +1,6 @@
 class RequestsController < ApplicationController
   def index
-  	@requests = Request.all
+  	@requests = Request.select(:result).uniq
   end
 
   def new
