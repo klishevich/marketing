@@ -1,0 +1,11 @@
+<h1>Requests#index</h1>
+  <table>
+    <tbody>
+      <% @requests.each do |request| %>
+        <tr>
+          <td><%= link_to request.url, request.url %></td>
+          <td><%= request.result %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>

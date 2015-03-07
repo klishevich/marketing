@@ -1,0 +1,11 @@
+<h1>Get Data List</h1>
+  <table>
+    <tbody>
+      <% @data.each do |datum| %>
+        <tr>
+          <td><%= link_to datum.url, datum.url %></td>
+          <td><%= datum.data %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
