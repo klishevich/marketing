@@ -2,10 +2,7 @@
 <p>Find me in app/views/requests/new.html.erb</p>
 
 <%= form_for @request do |f| %>
-  <div class="form-group">
-    <%= f.label :url %><%= f.text_field :url, class: "form-control" %>
-  </div>  
-  <%= f.submit "Сохранить", class: "btn btn-large btn-primary", id: "Save" %>
+  <%= f.submit "Запрос", class: "btn btn-large btn-primary", id: "Save" %>
   <br/>
 <% end %>
 <br/>

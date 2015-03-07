@@ -6,8 +6,9 @@
         <% var +=1 %>
         <tr>
           <td><%= var %></td>
-          <td>| <%= link_to request.id, request %></td>
           <td>| <%= request.bank %></td>
+          <td>| <%= request.result %></td>
+          <td>| <%= link_to request.id, request %></td>
           <td>| <%= request.p_code %></td>
         </tr>
       <% end %>
