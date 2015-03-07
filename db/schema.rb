@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150307054439) do
+ActiveRecord::Schema.define(version: 20150307181343) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,8 +26,14 @@ ActiveRecord::Schema.define(version: 20150307054439) do
   create_table "requests", force: :cascade do |t|
     t.string   "url"
     t.string   "result"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+    t.string   "bank"
+    t.string   "p_name"
+    t.string   "p_code"
+    t.integer  "p_sum_rub",     limit: 8
+    t.integer  "p_sum_foreign", limit: 8
+    t.integer  "p_sum_total",   limit: 8
   end
 
 end

@@ -1,10 +1,14 @@
 <h1>Requests#index</h1>
   <table>
     <tbody>
+      <% var = 0 %>
       <% @requests.each do |request| %>
+        <% var +=1 %>
         <tr>
-          <td><%= link_to request.url, request.url %></td>
-          <td><%= request.result %></td>
+          <td><%= var %></td>
+          <td>| <%= link_to request.id, request %></td>
+          <td>| <%= request.bank %></td>
+          <td>| <%= request.p_code %></td>
         </tr>
       <% end %>
     </tbody>
